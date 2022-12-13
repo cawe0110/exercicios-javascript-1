@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //base functions
+        function skipline(){
+            document.write("<br><br>");
+        }
+        function show(frase){
+            document.write(frase);
+            skipline();
+        }
+        //base functions
+
+        //program intent
+        var nome = prompt("qual é seu nome? ")
+        show("Bem vindo ao calculador IMC " + nome)
+
+        var peso = parseFloat(prompt("informe seu peso: "));
+        var altura= parseFloat(prompt("informe sua altura: "));
+
+        var IMC = peso/(altura**2);
+
+
+        show("seu IMC é : " + IMC);
+
+        function result(){
+            if(IMC >= 18.5 & IMC < 35){
+                show("peso ideal")
+            }
+            else if(IMC > 35){
+                show("acima do peso")
+            };
+            if(IMC < 18.5){
+                show("abaixo do peso")
+            };
+        };
+        result()
+
+
+    </script>
+
+</body>
+</html>
